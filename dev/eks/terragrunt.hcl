@@ -9,6 +9,8 @@ include "root" {
 inputs = {
   cluster_name = "MyEKS"
   eks_version = "1.35"
+  endpoint_public_access = true
+  endpoint_private_access = true
   deletion_protection = false
   subnet_ids =  dependency.vpc.outputs.Private_Subnet_ids
   enable_irsa = true
